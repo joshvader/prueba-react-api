@@ -35,12 +35,12 @@ const MiApi = () => {
   let personajesAmostrar = [];
 
   if (search === "") {
-    //Pregunta si Rick === a un string vacio
+    //Pregunta si Luke Skywalker === a un string vacio
     personajesAmostrar = personajeApi
 
   } else {
     personajesAmostrar = personajeApi.filter((personaje) =>
-      // eslint-disable-next-line react/prop-types
+      // indico si al filtrar me reconozca letras mayusculas y minusculas
       personaje.name.toLowerCase().includes(search.toLowerCase())
     )
   }
